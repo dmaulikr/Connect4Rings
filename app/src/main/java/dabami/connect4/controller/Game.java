@@ -6,7 +6,6 @@ import dabami.connect4.util.GameConstants;
 
 public class Game {
 
-
     private int[][] table = new int[GameConstants.MAX_ROWS][GameConstants.MAX_COLUMNS];
 
     public Game() {
