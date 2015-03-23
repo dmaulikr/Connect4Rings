@@ -11,4 +11,6 @@ public class GameConstants {
     public static final int VOID_POSITION = 0;
     public static final int AI_COIN = 1;
     public static final int PLAYER_COIN = 2;
+
+    public static final int WIN_NUMBER = 4;
 }

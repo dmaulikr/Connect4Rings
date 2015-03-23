@@ -37,13 +37,55 @@ public class Game {
     }
 
     public void dropCoin(int column, int coin) {
+        boolean inserted = false;
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
             if (this.table[row][column] != GameConstants.VOID_POSITION) {
                 this.table[row - 1][column] = coin;
-                return;
+                inserted = true;
             }
         }
-        this.table[GameConstants.MAX_ROWS - 1][column] = coin;
+        if(!inserted) {
+            this.table[GameConstants.MAX_ROWS - 1][column] = coin;
+        }
+
+    }
+
+    private boolean checkRows(int insertedCoinType){
+        for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
+            int count = 0;
+            for(int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++){
+                if(this.table[row][column] == insertedCoinType){
+                    count++;
+                }else{
+                    count = 0;
+                }
+                if(count == GameConstants.WIN_NUMBER){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean checkColumns(int insertedCoinType){
+        for(int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++){
+            int count = 0;
+            for(int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++){
+                if(this.table[row][column] == insertedCoinType){
+                    count++;
+                }else{
+                    count = 0;
+                }
+                if(count == GameConstants.WIN_NUMBER){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean checkDiagonals(int insertedCoinType){
+        return false;
     }
 
     public int[][] getTable() {
