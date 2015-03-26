@@ -42,6 +42,7 @@ public class Game {
             if (this.table[row][column] != GameConstants.VOID_POSITION) {
                 this.table[row - 1][column] = coin;
                 inserted = true;
+                break;
             }
         }
         if(!inserted) {
@@ -85,7 +86,37 @@ public class Game {
     }
 
     private boolean checkDiagonals(int insertedCoinType){
+        String victoryChain;
+        if(GameConstants.AI_COIN == insertedCoinType){
+            victoryChain = GameConstants.VICTORY_CHAIN_AI;
+        }else{
+            victoryChain = GameConstants.VICTORY_CHAIN_PLAYER;
+        }
+
+        for (int i = 0; i < 3; i++) {
+            String str = "";
+            for (int k = 0; k < 6 - i; k++)
+                str += Integer.toString(this.table[i + k][k]);
+            if (str.contains(victoryChain))
+                return true;
+        }
+
+        for (int j = 1; j < 4; j++) {
+            String str = "";
+            for (int k = 0; k < 7 - j; k++)
+                str += Integer.toString(this.table[k][j + k]);
+            if (str.contains(victoryChain))
+                return true;
+        }
         return false;
+    }
+
+    public boolean checkTableState(int insertedCoinType){
+        if(checkRows(insertedCoinType) || checkColumns(insertedCoinType) || checkDiagonals(insertedCoinType)){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public int[][] getTable() {

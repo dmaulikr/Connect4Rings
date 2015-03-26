@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
     }
 
     private int[] fromIdToPosition(int id){
-        for(int row = GameConstants.FIRST_ROW; row< GameConstants.MAX_ROWS; row++){
+        for(int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++){
             for(int column = GameConstants.FIRST_COLUMN;column<GameConstants.MAX_COLUMNS;column++){
                 if(this.ids[row][column] == id){
                     int[] position = {row, column};
