@@ -1,9 +1,11 @@
-package dabami.connect4;
+package com.dabami.connect4;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
+
+import dabami.connect4.R;
 
 public class Initial extends Activity {
 

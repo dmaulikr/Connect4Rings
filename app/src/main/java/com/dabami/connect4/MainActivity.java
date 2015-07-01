@@ -1,4 +1,4 @@
-package dabami.connect4;
+package com.dabami.connect4;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,8 +6,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import dabami.connect4.controller.Game;
-import dabami.connect4.util.GameConstants;
+import com.dabami.connect4.controller.Game;
+import com.dabami.connect4.util.GameConstants;
+
+import dabami.connect4.R;
 
 
 public class MainActivity extends Activity {

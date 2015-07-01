@@ -1,8 +1,8 @@
-package dabami.connect4.controller;
+package com.dabami.connect4.controller;
 
 import java.util.Random;
 
-import dabami.connect4.util.GameConstants;
+import com.dabami.connect4.util.GameConstants;
 
 public class Game {
 

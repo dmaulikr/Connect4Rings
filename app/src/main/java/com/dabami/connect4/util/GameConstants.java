@@ -1,4 +1,4 @@
-package dabami.connect4.util;
+package com.dabami.connect4.util;
 
 public class GameConstants {
 
