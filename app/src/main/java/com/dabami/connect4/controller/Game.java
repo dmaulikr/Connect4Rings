@@ -1,8 +1,8 @@
 package com.dabami.connect4.controller;
 
-import java.util.Random;
-
 import com.dabami.connect4.util.GameConstants;
+
+import java.util.Random;
 
 public class Game {
 
@@ -45,22 +45,22 @@ public class Game {
                 break;
             }
         }
-        if(!inserted) {
+        if (!inserted) {
             this.table[GameConstants.MAX_ROWS - 1][column] = coin;
         }
 
     }
 
-    private boolean checkRows(int insertedCoinType){
+    private boolean checkRows(int insertedCoinType) {
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
             int count = 0;
-            for(int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++){
-                if(this.table[row][column] == insertedCoinType){
+            for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
+                if (this.table[row][column] == insertedCoinType) {
                     count++;
-                }else{
+                } else {
                     count = 0;
                 }
-                if(count == GameConstants.WIN_NUMBER){
+                if (count == GameConstants.WIN_NUMBER) {
                     return true;
                 }
             }
@@ -68,16 +68,16 @@ public class Game {
         return false;
     }
 
-    private boolean checkColumns(int insertedCoinType){
-        for(int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++){
+    private boolean checkColumns(int insertedCoinType) {
+        for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
             int count = 0;
-            for(int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++){
-                if(this.table[row][column] == insertedCoinType){
+            for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
+                if (this.table[row][column] == insertedCoinType) {
                     count++;
-                }else{
+                } else {
                     count = 0;
                 }
-                if(count == GameConstants.WIN_NUMBER){
+                if (count == GameConstants.WIN_NUMBER) {
                     return true;
                 }
             }
@@ -85,11 +85,11 @@ public class Game {
         return false;
     }
 
-    private boolean checkDiagonals(int insertedCoinType){
+    private boolean checkDiagonals(int insertedCoinType) {
         String victoryChain;
-        if(GameConstants.AI_COIN == insertedCoinType){
+        if (GameConstants.AI_COIN == insertedCoinType) {
             victoryChain = GameConstants.VICTORY_CHAIN_AI;
-        }else{
+        } else {
             victoryChain = GameConstants.VICTORY_CHAIN_PLAYER;
         }
 
@@ -111,10 +111,10 @@ public class Game {
         return false;
     }
 
-    public boolean checkTableState(int insertedCoinType){
-        if(checkRows(insertedCoinType) || checkColumns(insertedCoinType) || checkDiagonals(insertedCoinType)){
+    public boolean checkTableState(int insertedCoinType) {
+        if (checkRows(insertedCoinType) || checkColumns(insertedCoinType) || checkDiagonals(insertedCoinType)) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

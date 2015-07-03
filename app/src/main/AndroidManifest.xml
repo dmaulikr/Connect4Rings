@@ -6,16 +6,15 @@
         android:allowBackup="true"
         android:icon="@drawable/c4_button"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
-        <activity android:name="com.dabami.connect4.Initial">
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.dabami.connect4.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dabami.connect4.MainActivity">
-        </activity>
+        <activity android:name="com.dabami.connect4.GameActivity" />
     </application>
 
 </manifest>
