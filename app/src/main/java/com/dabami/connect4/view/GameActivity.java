@@ -1,4 +1,4 @@
-package com.dabami.connect4;
+package com.dabami.connect4.view;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -47,8 +47,8 @@ public class GameActivity extends Activity {
         int id = imageButton.getId();
         int[] position = fromIdToPosition(id);
         int column = position[1];
-        if (this.game.isColumnAvailable(column)) {
-            this.game.dropCoin(column, GameConstants.PLAYER_COIN);
+        if (this.game.userMovement(column)) {
+            drawTable();
             this.game.aiMovement();
             drawTable();
         } else {
@@ -59,14 +59,13 @@ public class GameActivity extends Activity {
     public void drawTable() {
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
             for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
-                int[][] table = this.game.getTable();
-                int tableSlot = table[row][column];
-                if (tableSlot != GameConstants.VOID_POSITION) {
+                int slotType = this.game.getSlotType(row, column);
+                if (slotType != GameConstants.VOID_POSITION) {
                     ImageButton imageButton = (ImageButton) findViewById(this.ids[row][column]);
-                    if (tableSlot == GameConstants.AI_COIN) {
-                        imageButton.setImageResource(R.drawable.c4_button_ai);
+                    if (slotType == GameConstants.AI_COIN) {
+                        imageButton.setImageResource(R.drawable.ai_coin);
                     } else {
-                        imageButton.setImageResource(R.drawable.c4_button_player);
+                        imageButton.setImageResource(R.drawable.user_coin);
                     }
                 }
             }

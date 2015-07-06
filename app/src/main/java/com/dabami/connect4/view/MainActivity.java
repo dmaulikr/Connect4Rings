@@ -1,4 +1,4 @@
-package com.dabami.connect4;
+package com.dabami.connect4.view;
 
 import android.app.Activity;
 import android.content.Intent;
