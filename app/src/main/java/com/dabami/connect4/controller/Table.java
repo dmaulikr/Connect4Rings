@@ -22,13 +22,13 @@ public class Table {
     }
 
     public boolean isColumnAvailable(int column) {
-        return (this.slots[GameConstants.FIRST_ROW][column].getType() == GameConstants.VOID_POSITION);
+        return (this.slots[GameConstants.FIRST_ROW][column].getType() == GameConstants.VOID_SLOT);
     }
 
     public void dropCoin(int column, int coin) {
         boolean inserted = false;
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
-            if (this.slots[row][column].getType() != GameConstants.VOID_POSITION) {
+            if (this.slots[row][column].getType() != GameConstants.VOID_SLOT) {
                 this.slots[row - 1][column].setType(coin);
                 inserted = true;
                 break;

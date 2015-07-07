@@ -32,4 +32,8 @@ public class Game {
     public int getSlotType(int row, int column) {
         return this.table.getSlot(row, column).getType();
     }
+
+    public boolean checkGameStatus(int coin) {
+        return this.table.checkTableState(coin);
+    }
 }

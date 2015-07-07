@@ -8,7 +8,7 @@ public class GameConstants {
     public static final int MAX_ROWS = 6;
     public static final int MAX_COLUMNS = 7;
 
-    public static final int VOID_POSITION = 0;
+    public static final int VOID_SLOT = 0;
     public static final int AI_COIN = 1;
     public static final int USER_COIN = 2;
 

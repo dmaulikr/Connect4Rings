@@ -49,8 +49,10 @@ public class GameActivity extends Activity {
         int column = position[1];
         if (this.game.userMovement(column)) {
             drawTable();
+            showGameStatus(GameConstants.USER_COIN);
             this.game.aiMovement();
             drawTable();
+            showGameStatus(GameConstants.AI_COIN);
         } else {
             Toast.makeText(this, R.string.full_column, Toast.LENGTH_SHORT).show();
         }
@@ -60,7 +62,7 @@ public class GameActivity extends Activity {
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
             for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
                 int slotType = this.game.getSlotType(row, column);
-                if (slotType != GameConstants.VOID_POSITION) {
+                if (slotType != GameConstants.VOID_SLOT) {
                     ImageButton imageButton = (ImageButton) findViewById(this.ids[row][column]);
                     if (slotType == GameConstants.AI_COIN) {
                         imageButton.setImageResource(R.drawable.ai_coin);
@@ -68,6 +70,17 @@ public class GameActivity extends Activity {
                         imageButton.setImageResource(R.drawable.user_coin);
                     }
                 }
+            }
+        }
+    }
+
+    public void showGameStatus(int coin) {
+        boolean status = this.game.checkGameStatus(coin);
+        if (status) {
+            if (coin == GameConstants.USER_COIN) {
+                Toast.makeText(this, R.string.user_victory, Toast.LENGTH_SHORT).show();
+            } else if (coin == GameConstants.AI_COIN) {
+                Toast.makeText(this, R.string.ai_victory, Toast.LENGTH_SHORT).show();
             }
         }
     }

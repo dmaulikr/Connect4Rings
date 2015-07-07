@@ -11,7 +11,7 @@ public class Slot {
     }
 
     private void initializeEmptySlot() {
-        this.type = GameConstants.VOID_POSITION;
+        this.type = GameConstants.VOID_SLOT;
     }
 
     public int getType() {

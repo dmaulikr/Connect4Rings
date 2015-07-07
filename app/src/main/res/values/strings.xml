@@ -3,4 +3,6 @@
 
     <string name="app_name">Connect 4</string>
     <string name="full_column">This column is full</string>
+    <string name="user_victory">You win!</string>
+    <string name="ai_victory">CPU wins ...</string>
 </resources>
