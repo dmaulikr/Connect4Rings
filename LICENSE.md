@@ -1,8 +1,3 @@
-# Connect 4 Rings
-Android game.
-
-## License ##
-
 The MIT License (MIT)
 
 Copyright (c) 2015 Daniel Bautista Miralles

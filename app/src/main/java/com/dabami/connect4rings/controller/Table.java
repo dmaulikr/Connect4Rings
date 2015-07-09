@@ -1,7 +1,7 @@
-package com.dabami.connect4.controller;
+package com.dabami.connect4rings.controller;
 
-import com.dabami.connect4.model.Slot;
-import com.dabami.connect4.util.GameConstants;
+import com.dabami.connect4rings.model.Slot;
+import com.dabami.connect4rings.util.GameConstants;
 
 public class Table {
 

@@ -1,6 +1,6 @@
-package com.dabami.connect4.model;
+package com.dabami.connect4rings.model;
 
-import com.dabami.connect4.util.GameConstants;
+import com.dabami.connect4rings.util.GameConstants;
 
 public class Slot {
 

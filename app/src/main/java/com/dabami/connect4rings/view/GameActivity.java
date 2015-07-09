@@ -1,4 +1,4 @@
-package com.dabami.connect4.view;
+package com.dabami.connect4rings.view;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.dabami.connect4.controller.Game;
-import com.dabami.connect4.util.GameConstants;
+import com.dabami.connect4rings.controller.Game;
+import com.dabami.connect4rings.util.GameConstants;
 
-import dabami.connect4.R;
+import dabami.connect4rings.R;
 
 public class GameActivity extends Activity {
     private final int[][] ids =

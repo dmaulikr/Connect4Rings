@@ -1,11 +1,11 @@
-package com.dabami.connect4.view;
+package com.dabami.connect4rings.view;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
-import dabami.connect4.R;
+import dabami.connect4rings.R;
 
 
 public class MainActivity extends Activity {
