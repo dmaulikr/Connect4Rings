@@ -8,4 +8,6 @@
     <dimen name="main_title_margin_bottom">50dp</dimen>
     <dimen name="zero">0dp</dimen>
     <dimen name="slot_margin">5dp</dimen>
+    <dimen name="button_corner_radius">10dp</dimen>
+    <dimen name="button_padding">5dp</dimen>
 </resources>
