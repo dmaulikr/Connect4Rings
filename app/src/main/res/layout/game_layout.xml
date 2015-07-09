@@ -1,0 +1,69 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/table_padding"
+    android:stretchColumns="*">
+
+    <TextView
+        android:layout_weight="2"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="@dimen/title"/>
+
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_0_6"/>
+    </TableRow>
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_1_6"/>
+    </TableRow>
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_2_6"/>
+    </TableRow>
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_3_6"/>
+    </TableRow>
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_4_6"/>
+    </TableRow>
+    <TableRow android:layout_weight="1">
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_0"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_1"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_2"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_3"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_4"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_5"/>
+        <ImageButton style="@style/SlotStyle" android:id="@+id/b_5_6"/>
+    </TableRow>
+
+</TableLayout>

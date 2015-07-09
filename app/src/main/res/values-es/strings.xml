@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="full_column">Esta columna está llena</string>
+    <string name="user_victory">¡Tú ganas!</string>
+    <string name="ai_victory">Gana la CPU ...</string>
+</resources>
