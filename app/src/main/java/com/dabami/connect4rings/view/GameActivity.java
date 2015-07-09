@@ -1,6 +1,7 @@
 package com.dabami.connect4rings.view;
 
 import android.app.Activity;
+import android.app.DialogFragment;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -8,10 +9,11 @@ import android.widget.Toast;
 
 import com.dabami.connect4rings.controller.Game;
 import com.dabami.connect4rings.util.GameConstants;
+import com.dabami.connect4rings.view.fragments.BackToMainMenuDialogFragment;
 
 import dabami.connect4rings.R;
 
-public class GameActivity extends Activity {
+public class GameActivity extends Activity implements BackToMainMenuDialogFragment.BackToMainMenuDialogListener {
     private final int[][] ids =
             {{R.id.b_0_0, R.id.b_0_1, R.id.b_0_2, R.id.b_0_3, R.id.b_0_4, R.id.b_0_5, R.id.b_0_6},
                     {R.id.b_1_0, R.id.b_1_1, R.id.b_1_2, R.id.b_1_3, R.id.b_1_4, R.id.b_1_5, R.id.b_1_6},
@@ -83,5 +85,17 @@ public class GameActivity extends Activity {
                 Toast.makeText(this, R.string.ai_victory, Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        DialogFragment dialogFragment = new BackToMainMenuDialogFragment();
+        dialogFragment.show(getFragmentManager(), "backDialog");
+    }
+
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog) {
+        dialog.dismiss();
+        super.onBackPressed();
     }
 }

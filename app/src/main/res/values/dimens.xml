@@ -1,8 +1,11 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="main_title">50sp</dimen>
     <dimen name="title">20sp</dimen>
-    <dimen name="table_padding">4dp</dimen>
+    <dimen name="main_screen_padding">10dp</dimen>
+    <dimen name="main_title_margin_top">50dp</dimen>
+    <dimen name="main_title_margin_bottom">50dp</dimen>
     <dimen name="zero">0dp</dimen>
     <dimen name="slot_margin">5dp</dimen>
 </resources>

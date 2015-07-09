@@ -3,4 +3,6 @@
     <color name="medium_sea_green">#3CB371</color>
     <color name="light_sky_blue">#87CEFA</color>
     <color name="tomato_red">#FF6633</color>
+    <color name="cream">#F5FFFA</color>
+    <color name="dark_board_grey">#2F4F4F</color>
 </resources>

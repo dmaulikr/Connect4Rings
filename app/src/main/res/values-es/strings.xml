@@ -4,4 +4,9 @@
     <string name="full_column">Esta columna está llena</string>
     <string name="user_victory">¡Tú ganas!</string>
     <string name="ai_victory">Gana la CPU ...</string>
+    <string name="main_menu_button_start">Comenzar una nueva partida</string>
+    <string name="back_main_menu_message">¿Seguro que quieres volver al menú principal?</string>
+    <string name="back_main_menu_title">Salir</string>
+    <string name="back_main_menu_positive">Aceptar</string>
+    <string name="back_main_menu_negative">Cancelar</string>
 </resources>

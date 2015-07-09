@@ -5,4 +5,9 @@
     <string name="full_column">This column is full</string>
     <string name="user_victory">You win!</string>
     <string name="ai_victory">CPU wins …</string>
+    <string name="main_menu_button_start">Start new game</string>
+    <string name="back_main_menu_message">Are you sure you want to go back to main menu?</string>
+    <string name="back_main_menu_title">Exit</string>
+    <string name="back_main_menu_positive">Accept</string>
+    <string name="back_main_menu_negative">Cancel</string>
 </resources>
