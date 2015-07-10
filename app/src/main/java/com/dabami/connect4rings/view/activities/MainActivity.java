@@ -1,4 +1,4 @@
-package com.dabami.connect4rings.view;
+package com.dabami.connect4rings.view.activities;
 
 import android.app.Activity;
 import android.content.Intent;

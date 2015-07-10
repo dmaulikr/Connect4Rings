@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.dabami.connect4rings.view.MainActivity"
+            android:name="com.dabami.connect4rings.view.activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dabami.connect4rings.view.GameActivity"
+            android:name="com.dabami.connect4rings.view.activities.GameActivity"
             android:screenOrientation="portrait" />
     </application>
 
