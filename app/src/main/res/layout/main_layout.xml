@@ -2,14 +2,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cream"
-    android:padding="@dimen/main_screen_padding"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/main_screen_padding">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/main_title_margin_top"
         android:layout_marginBottom="@dimen/main_title_margin_bottom"
+        android:layout_marginTop="@dimen/main_title_margin_top"
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/dark_board_grey"
@@ -20,6 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:paddingLeft="@dimen/button_padding"
+        android:paddingRight="@dimen/button_padding"
         android:text="@string/main_menu_button_start" />
 
 </LinearLayout>

@@ -10,4 +10,5 @@
     <string name="back_main_menu_title">Exit</string>
     <string name="back_main_menu_positive">Accept</string>
     <string name="back_main_menu_negative">Cancel</string>
+    <string name="back_dialog_tag" translatable="false">backDialog</string>
 </resources>
