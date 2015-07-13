@@ -3,7 +3,6 @@ package com.dabami.connect4rings.view.activities;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -21,6 +20,7 @@ public class GameActivity extends Activity implements BackToMainMenuDialogListen
 
     private Animation animTranslate;
     private int[][] ids;
+    private int[][] printedIds;
     private Game game;
 
     @Override
@@ -40,31 +40,29 @@ public class GameActivity extends Activity implements BackToMainMenuDialogListen
                 {R.id.b_3_0, R.id.b_3_1, R.id.b_3_2, R.id.b_3_3, R.id.b_3_4, R.id.b_3_5, R.id.b_3_6},
                 {R.id.b_4_0, R.id.b_4_1, R.id.b_4_2, R.id.b_4_3, R.id.b_4_4, R.id.b_4_5, R.id.b_4_6},
                 {R.id.b_5_0, R.id.b_5_1, R.id.b_5_2, R.id.b_5_3, R.id.b_5_4, R.id.b_5_5, R.id.b_5_6}};
+
+        printedIds = new int[GameConstants.MAX_ROWS][GameConstants.MAX_COLUMNS];
     }
 
     private void setAnimations() {
         animTranslate = AnimationUtils.loadAnimation(this, R.anim.translate);
     }
 
-    private int[] fromIdToPosition(int id) {
+    private int fromIdToColumn(int id) {
         for (int row = GameConstants.FIRST_ROW; row < GameConstants.MAX_ROWS; row++) {
             for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
                 if (this.ids[row][column] == id) {
-                    return new int[]{row, column};
+                    return column;
                 }
             }
         }
-        return null;
+        return 0;
     }
 
     public void onClick(View view) {
         ImageButton imageButton = (ImageButton) view;
         int id = imageButton.getId();
-        int[] position = fromIdToPosition(id);
-        int column = 0;
-        if (position != null) {
-            column = position[1];
-        }
+        int column = fromIdToColumn(id);
         if (this.game.userMovement(column)) {
             drawTable();
             showGameStatus(GameConstants.USER_COIN);
@@ -81,13 +79,16 @@ public class GameActivity extends Activity implements BackToMainMenuDialogListen
             for (int column = GameConstants.FIRST_COLUMN; column < GameConstants.MAX_COLUMNS; column++) {
                 int slotType = this.game.getSlotType(row, column);
                 if (slotType != GameConstants.VOID_SLOT) {
-                    final ImageButton imageButton = (ImageButton) findViewById(this.ids[row][column]);
-                    if (slotType == GameConstants.AI_COIN) {
-                        imageButton.setImageResource(R.drawable.ai_coin);
-                    } else {
-                        imageButton.setImageResource(R.drawable.user_coin);
+                    if (this.ids[row][column] != this.printedIds[row][column]) {
+                        final ImageButton imageButton = (ImageButton) findViewById(this.ids[row][column]);
+                        imageButton.startAnimation(animTranslate);
+                        if (slotType == GameConstants.AI_COIN) {
+                            imageButton.setImageResource(R.drawable.ai_coin);
+                        } else {
+                            imageButton.setImageResource(R.drawable.user_coin);
+                        }
+                        this.printedIds[row][column] = this.ids[row][column];
                     }
-
                 }
             }
         }
