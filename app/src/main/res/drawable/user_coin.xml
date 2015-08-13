@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:innerRadiusRatio="3"
     android:shape="ring"
     android:thicknessRatio="7"
     android:useLevel="false">
 
-    <solid android:color="@color/medium_sea_green" />
+    <solid
+        android:color="@color/medium_sea_green"/>
+
 </shape>
